@@ -1,5 +1,5 @@
 .ContactList {
-  overflow-y: auto;
-  height: 300px;
+  overflow: auto;
+
   padding: 0;
 }
