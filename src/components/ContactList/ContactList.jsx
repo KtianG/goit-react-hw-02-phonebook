@@ -7,10 +7,20 @@ import { ContactListElement } from 'components/ContactListElement/ContactListEle
 export class ContactList extends Component {
   static propTypes = {
     contacts: PropTypes.array.isRequired,
+    removeContact: PropTypes.func.isRequired,
   };
 
   renderContactList = ({ id, name, number }) => {
-    return <ContactListElement key={id} name={name} number={number} />;
+    const { removeContact } = this.props;
+
+    return (
+      <ContactListElement
+        key={id}
+        name={name}
+        number={number}
+        removeContact={removeContact}
+      />
+    );
   };
 
   render() {

@@ -12,8 +12,9 @@ export class ContactForm extends Component {
   }
 
   render() {
+    const { handleSubmit } = this.props;
     return (
-      <form className={css.contactForm}>
+      <form className={css.contactForm} onSubmit={e => handleSubmit(e)}>
         <h3>Name</h3>
         <input
           type="text"
